@@ -1,2 +1,2 @@
 # Produto-SBJL
-Projeto feito com a tríade de Front-End
+Projeto realizado usando a tríade de Front-End
