@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+  }
+
+  header {
+    background-color: #ffc500;
+    padding: 2px 0px;
+    margin-top: 0px 7px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  header h4 {
+    color: #090919;
+    font-family: 'Times New Roman';
+    font-size: 121%;
+    text-align: left;
+  }
+
+  #imagemDinamica {
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-position-y: center;
+    transition: opacity 0.5s ease-in-out;
+   }
+
+  #imagemDinamica.hidden {
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .info {
+    text-align: center;
+    text-decoration: wavy;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 0px solid #ffe2bd;
+    border-radius: 5px;
+  }
+
+  #info h2 {
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  .postStyle {
+    background-color: #fff0bd;
+  }
+
+  .post {
+    background-color: #fff3ca;
+    text-align: left;
+    text-decoration: wavy;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 0px solid #ffe2bd;
+    border-radius: 5px;
+  }
+
+  .paragrafoEstilizado {
+    font-style: oblique;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .contact {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .footer {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .card-text {
+    position: relative;
+  }
+  
+  .hidden-content {
+    display: none;
+    margin-top: 10px;
+  }
+  
+  
+  #show-more:checked ~ .hidden-content {
+    display: block;
+    cursor: pointer;
+  }
+  
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* Espaço entre as colunas */
+  }
+  
+  .grid-item {
+    border: 1px solid #ccc; /* Adicione uma borda para visualização */
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: x-large;
+    font-family: 'Arial Narrow Bold', monospace;
+  }
+
+  .custom-link {
+    text-shadow: #090919;
+    color: #ffc500; /* Cor do texto do link personalizado */
+    text-decoration: none; /* Remove o sublinhado, se desejar */
+    /* Outros estilos personalizados */
+}
+
+  
