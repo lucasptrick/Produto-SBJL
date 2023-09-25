@@ -1,133 +1,153 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>JL</title>
-  <link rel="icon" type= "image/png" href="img\Icon.png">
+  <link rel="icon" type="image/png" href="img\Icon.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-<!-- Cabeçalho e menu switch -->  
-      <header>
-        <nav class="navbar navbar-light">
-            <div style="display: flex; align-items: center;">
-                <img src="img/Icon.png" width="40" height="50">
-                <h4 style="margin-left: 10px;">
-                    Instituto de<br>
-                    Saneamento<br>
-                    Básico - JL
-                </h4>
-            </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="projeto.html">Projetos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="servicos.html">Serviços</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contato.html">Contato</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="sobre.html">Sobre</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-<!-- Slide de Imagens da logo JL logo abaixo do cabeçalho em JS -->        
+  <!-- Cabeçalho e menu switch -->
+  <header>
+    <nav class="navbar navbar-light">
+      <div style="display: flex; align-items: center;">
+        <img src="img/Icon.png" width="40" height="50">
+        <h4 style="margin-left: 10px;">
+          Instituto de<br>
+          Saneamento<br>
+          Básico - JL
+        </h4>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="projeto.html">Projetos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="servicos.html">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contato.html">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sobre.html">Sobre</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Slide de Imagens da logo JL logo abaixo do cabeçalho em JS -->
   <main class="imagemBackground">
     <img id="imagemDinamica" src="img/Banner1.PNG" alt="Imagem Dinamica">
   </main>
 
-<!-- Seção de Informações -->  
+  <!-- Seção de Informações -->
   </section>
   <section id="info">
-      <h2>Iniciativas</h2>
-      <div class="info">
-          <p>Nossas  iniciativas buscam ampliar a capacidade de ação e de intervenção dos públicos envolvidos com a agenda de saneamento.</p>
-          
-      </div>
+    <h2>Iniciativas</h2>
+    <div class="info">
+      <p>Nossas iniciativas buscam ampliar a capacidade de ação e de intervenção dos públicos envolvidos com a agenda de
+        saneamento.</p>
+
+    </div>
   </section>
 
-<!-- Grids de notícias -->    
+  <!-- Grids de notícias -->
   <div class="container">
     <div class="row">
       <div class="col">
         <div class="card">
           <div style="display: flex; align-items: center;">
-          <img src="img/ToiletDay.jpg" width="90" height="90">
-          <div class="card-title">Dia Mundial <br> do Banheiro</div>
+            <img src="img/ToiletDay.jpg" width="90" height="90">
+            <div class="card-title">Dia Mundial <br> do Banheiro</div>
           </div>
-          <p class="card-text">Celebrado em 19 de novembro, faz parte do calendário da Organização das Nações Unidas.</p>
+          <p class="card-text">Celebrado em 19 de novembro, faz parte do calendário da Organização das Nações Unidas.
+          </p>
           <a class="custom-link" href="https://diamundialdobanheiro.org.br/"><br>Clique aqui! </a>
-        </div>
-      </div>
-      
-      <div class="col">
-        <div class="card">
-          <div style="display: flex; align-items: center;">
-          <img src="img/MunicipiosSaneamento.png" width="90" height="90">
-          <div class="card-title">Municípios e <br> Saneamento</div>
-          </div>
-          <p class="card-text">As principais informações e indicadores sobre saneamento dos 5.570 municípios brasileiros.</p>
-          <input type="checkbox" id="show-more">
-                  <div class="hidden-content">
-                    O Novo Marco Regulatório do Saneamento prevê que municípios que tenham pelo menos 1.300 instalações já sejam considerados economicamente viáveis para receber novos investimentos em saneamento. A meta é levar água e esgoto tratados para todo o Brasil.
-                    Com a aprovação do Novo Marco, as empresas ganhadoras atuarão em microrregiões divididas em blocos. Dessa forma, os pequenos municípios serão beneficiados e os custos, compartilhados com cidades com superávit. 
-                    A abertura do mercado de saneamento para a concorrência de empresas privadas será baseada na melhor tarifa e na maior universalização do serviço.
-                    O Projeto de Lei nº 3.261/19, aprovado em junho no Senado, que cria o novo marco legal do saneamento básico, busca resolver os entraves que impedem a expansão da rede no Brasil e a superação dos problemas decorrentes da ausência dele.
-                    Uma das propostas contidas no projeto é a possibilidade de que municípios menores possam se unir em bloco para garantir a viabilidade econômico-financeira de um projeto. Apoie, para a água chegar a quem mais precisa!
-                  </div>
-              <label for="show-more" class="read-more-label"></label>
         </div>
       </div>
 
       <div class="col">
         <div class="card">
           <div style="display: flex; align-items: center;">
-          <img src="img/SaneamentoSolucao.PNG" width="90" height="90">
-          <div class="card-title">Saneamento <br> tem solução</div>
+            <img src="img/MunicipiosSaneamento.png" width="90" height="90">
+            <div class="card-title">Municípios e <br> Saneamento</div>
           </div>
-          <p class="card-text">O IAS e parceiros, coordenam a rede que promove esgotamento sanitário como ferramenta de promoção de direitos.</p>
+          <p class="card-text">As principais informações e indicadores sobre saneamento dos 5.570 municípios
+            brasileiros.</p>
+          <input type="checkbox" id="show-more">
+          <div class="hidden-content">
+            O Novo Marco Regulatório do Saneamento prevê que municípios que tenham pelo menos 1.300 instalações já sejam
+            considerados economicamente viáveis para receber novos investimentos em saneamento. A meta é levar água e
+            esgoto tratados para todo o Brasil.
+            Com a aprovação do Novo Marco, as empresas ganhadoras atuarão em microrregiões divididas em blocos. Dessa
+            forma, os pequenos municípios serão beneficiados e os custos, compartilhados com cidades com superávit.
+            A abertura do mercado de saneamento para a concorrência de empresas privadas será baseada na melhor tarifa e
+            na maior universalização do serviço.
+            O Projeto de Lei nº 3.261/19, aprovado em junho no Senado, que cria o novo marco legal do saneamento básico,
+            busca resolver os entraves que impedem a expansão da rede no Brasil e a superação dos problemas decorrentes
+            da ausência dele.
+            Uma das propostas contidas no projeto é a possibilidade de que municípios menores possam se unir em bloco
+            para garantir a viabilidade econômico-financeira de um projeto. Apoie, para a água chegar a quem mais
+            precisa!
+          </div>
+          <label for="show-more" class="read-more-label"></label>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card">
+          <div style="display: flex; align-items: center;">
+            <img src="img/SaneamentoSolucao.PNG" width="90" height="90">
+            <div class="card-title">Saneamento <br> tem solução</div>
+          </div>
+          <p class="card-text">O IAS e parceiros, coordenam a rede que promove esgotamento sanitário como ferramenta de
+            promoção de direitos.</p>
           <a class="custom-link" href="https://www.saneamentotemsolucao.org.br/">Clique aqui!</a>
         </div>
       </div>
     </div>
   </div>
-  
-<div class="postStyle">
-  <section id="post" style="display: flex;">
-    <img src="img/Post.jpg" style="display: inline-block; margin-left: 10px;">
-    <div class="post" style="display: inline-block; margin-left: 10px;">
+
+  <div class="postStyle">
+    <section id="post" style="display: flex;">
+      <img src="img/Post.jpg" style="display: inline-block; margin-left: 10px;">
+      <div class="post" style="display: inline-block; margin-left: 10px;">
         <h2>Saneamento 2022</h2>
         <p></p>
-        <p class="paragrafoEstilizado">Balanço e perspectivas após aprovação do novo marco legal do saneamento. NOV 2022</p>
-        <p>Balanço e perspectivas após aprovação do novo Marco Legal da Lei 14.026/2020 traz uma análise sobre o que aconteceu com a política brasileira para saneamento básico passado pouco mais de um ano da aprovação do novo Marco Legal do Saneamento, sancionado em julho de 2020.</p>
-        <a class="custom-link" href="https://www.aguaesaneamento.org.br/publicacoes/saneamento-2021-publicacao/">Baixe o PDF</a>
+        <p class="paragrafoEstilizado">Balanço e perspectivas após aprovação do novo marco legal do saneamento. NOV 2022
+        </p>
+        <p>Balanço e perspectivas após aprovação do novo Marco Legal da Lei 14.026/2020 traz uma análise sobre o que
+          aconteceu com a política brasileira para saneamento básico passado pouco mais de um ano da aprovação do novo
+          Marco Legal do Saneamento, sancionado em julho de 2020.</p>
+        <a class="custom-link" href="https://www.aguaesaneamento.org.br/publicacoes/saneamento-2021-publicacao/">Baixe o
+          PDF</a>
       </div>
-  </section>
-</div>
+    </section>
+  </div>
 
-            
-          
-      
 
-<!-- Rodapé -->      
-      <footer class="bg-dark text-light text-center py-3">
-        <p>Email: institutojl@saneamentobasico.com</p>
-        <p>&copy; 2023 JL. Todos os direitos reservados.</p>
-      </footer>
-    
+
+
+
+  <!-- Rodapé -->
+  <footer class="bg-dark text-light text-center py-3">
+    <p>Email: institutojl@saneamentobasico.com</p>
+    <p>&copy; 2023 JL. Todos os direitos reservados.</p>
+  </footer>
+
 
   <script src="script.js"></script>
   <script src="js/bootstrap.min.js"></script>
 </body>
+
 </html>
