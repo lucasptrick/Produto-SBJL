@@ -39,6 +39,7 @@ function makeApiRequest(apiUrl) {
         dataType: 'json',
         success: function(data) {
             alert(data)
+// conteúdo HTML = 'Introdução: $data.introduction <br> Paragrafo 1: $data.paragraph1 \n Paragrafo 2: $data.paragraph2';
             console.log('Resposta da API:', data);
             // Adicione aqui o código para manipular a resposta JSON conforme necessário
         },
