@@ -10,11 +10,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="./getURL.js"></script>
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-light">
+    <nav class="navbar navbar-light" href="index.html">
       <div style="display: flex; align-items: center;">
         <img src="img/Icon.png" width="40" height="50">
         <h4 style="margin-left: 10px;">
@@ -52,12 +55,45 @@
     <h1>Nossos Projetos</h1>
     <br>
   </div>
+
+    <!------Introdução------->
+    <div class="container container-introducao">
+      <h3>Introdução</h3> 
+      <p>Adicione aqui a introdução a respeito do projeto</p>
+  
+      <iframe id="iframe" frameBorder="0" height="300" width="1000"></iframe>
+    </div>
+
+
+  <!------Desenvolvimento1------->
+  <div class="container container-desenvolvimento">
+    <h3>Desenvolvimento parte 1</h3> 
+    <p>Aqui deve está a primeira parte do projeto!</p>
+
+  </div>
+
+    <!------Desenvolvimento2------->
+    <div class="container container-desenvolvimento">
+      <h3>Desenvolvimento parte 2</h3> 
+      <p>Aqui deve está a segunda parte do projeto!</p>
+  
+    </div>
+
+
+  <!------Conclusão------>
+  <div class="container container-conclusao">
+    <h3>Conclusão</h3> 
+    <p>Adicione aqui a conclusão do projeto!</p>
+
+  </div>
   
   <!-- Rodapé -->
   <footer class="bg-dark text-light text-center py-3 rodape">
     <p>Email: institutojl@saneamentobasico.com</p>
     <p>&copy; 2023 JL. Todos os direitos reservados.</p>
   </footer>
+  
+  
 </body>
 
 </html>
