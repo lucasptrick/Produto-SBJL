@@ -1,5 +1,18 @@
 // getURL.js
-const avatar ="https://tr.rbxcdn.com/58ff075820895bda7b0422f7e7f3b4fa/420/420/Hat/Png"; 
+const avatar1 = "https://cdn.imgbin.com/6/19/3/imgbin-pepe-the-frog-youtube-meme-video-drawception-youtube-7A8dZRLY7iDjafL3d9DFfnC6h.jpg";
+const avatar2 = "https://tr.rbxcdn.com/58ff075820895bda7b0422f7e7f3b4fa/420/420/Hat/Png"; 
+const avatar3 = "https://w7.pngwing.com/pngs/878/763/png-transparent-squidward-tentacles-internet-meme-know-your-meme-meme-hand-sticker-cartoon-thumbnail.png";
+const avatar4 = "https://tr.rbxcdn.com/dd2b1a2bb310f1401b3eb9eeb243cf70/420/420/Image/Png";
+const avatar5 = "https://e7.pngegg.com/pngimages/378/59/png-clipart-old-school-runescape-internet-meme-youtube-random-game-child-thumbnail.png";
+const avatar6 = "https://m.media-amazon.com/images/I/71UdPXPpjoL.png";
+const avatar7 = "https://gifs.eco.br/wp-content/uploads/2023/05/imagens-de-cachorro-meme-png-1.png";
+const avatar8= "https://venngage-wordpress.s3.amazonaws.com/uploads/2022/09/meme_awkward_look_monkey_puppet.png";
+const listaImagens = [avatar1, avatar2, avatar3, avatar4, avatar5,avatar6,avatar7,avatar8];
+
+function imagemAleatoria() {
+  const indiceAleatorio = Math.floor(Math.random() * listaImagens.length);
+  return listaImagens[indiceAleatorio];
+}
 // comentariosArray[i].nome   comentariosArray[i].comentario
 function criarComentario(imagem,name,comment) {
     var container = document.getElementById("container")
@@ -106,7 +119,7 @@ function makeApiRequest(apiUrl) {
             var comentariosArray = data.comentario;
 
             for (var i = 0; i < comentariosArray.length; i++) {
-                criarComentario(avatar,comentariosArray[i].nome,comentariosArray[i].comentario)
+                criarComentario(imagemAleatoria(),comentariosArray[i].nome,comentariosArray[i].comentario)
             }
 
             console.log('Resposta da API:', data);
@@ -143,7 +156,7 @@ function adicionarComentario() {
                 console.log(response);
                 const name = document.getElementById('nome');
                 const comment = document.getElementById('comentario');
-                criarComentario(avatar,name.value,comment.value)
+                criarComentario(imagemAleatoria(),name.value,comment.value)
 
                 // Limpar os campos do formulário
                 name.value = '';
