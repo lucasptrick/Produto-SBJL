@@ -52,30 +52,27 @@
   <!-- Conteúdo da Página de Projetos -->
   <div class="container">
     <br>
-    <h1>Nossos Projetos</h1>
+    <h1 id="titleText"></h1>
     <br>
   </div>
 
     <!------Introdução------->
     <div class="container container-introducao">
       <h3>Introdução</h3> 
-      <p>Adicione aqui a introdução a respeito do projeto</p>
-  
-      <iframe id="iframe" frameBorder="0" height="300" width="1000"></iframe>
+      <p id="introducaoText"></p>
+
     </div>
 
 
   <!------Desenvolvimento1------->
   <div class="container container-desenvolvimento">
-    <h3>Desenvolvimento parte 1</h3> 
-    <p>Aqui deve está a primeira parte do projeto!</p>
+    <p id="DesenvolvimentoText1"></p>
 
   </div>
 
     <!------Desenvolvimento2------->
     <div class="container container-desenvolvimento">
-      <h3>Desenvolvimento parte 2</h3> 
-      <p>Aqui deve está a segunda parte do projeto!</p>
+      <p id="DesenvolvimentoText2"></p>
   
     </div>
 
@@ -83,17 +80,32 @@
   <!------Conclusão------>
   <div class="container container-conclusao">
     <h3>Conclusão</h3> 
-    <p>Adicione aqui a conclusão do projeto!</p>
+    <p id="comclusaoText"></p>
 
   </div>
+
+  <div class="container container-conclusao">
+    <h3>Comentarios</h3> 
+    <div id="container">
+      <form id="formularioComentario">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+    
+        <label for="comentario">Comentário:</label>
+        <textarea id="comentario" required></textarea>
+    
+        <button type="button" onclick="adicionarComentario()">Adicionar Comentário</button>
+    </form>
+
+    </div>
+  </div>
+
   
   <!-- Rodapé -->
   <footer class="bg-dark text-light text-center py-3 rodape">
     <p>Email: institutojl@saneamentobasico.com</p>
     <p>&copy; 2023 JL. Todos os direitos reservados.</p>
   </footer>
-  
-  
 </body>
 
 </html>

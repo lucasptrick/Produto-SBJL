@@ -301,3 +301,25 @@ p {
   text-decoration: none; 
   color: inherit; 
 }
+
+/* Estilos para o container de AcessoProjeto [Intro, Desenvolvimento e Conclusao] */
+.container-introducao {
+  background-color: #e2e3e5; 
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.container-desenvolvimento {
+  background-color: #e2e3e5; 
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.container-conclusao {
+  background-color: #e2e3e5; 
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
