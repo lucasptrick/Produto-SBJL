@@ -69,19 +69,10 @@ function redirectToAPIRoute() {
     if (projetoParam) {
         const apiUrl = 'http://127.0.0.1:5000/';
 
-        switch (projetoParam) {
-            case '1':
-                makeApiRequest(apiUrl + 'City-Sewer');
-                break;
-            case '2':
-                makeApiRequest(apiUrl + 'Water-Responsible');
-                break;
-            case '3':
-                makeApiRequest(apiUrl + 'Solid-Waste');
-                break;
-            default:
-                console.error('Projeto não reconhecido:', projetoParam);
-        }
+                const teste = apiUrl + 'paginaProjeto/' + projetoParam
+                console.log(teste)
+                makeApiRequest(teste);
+        
     } else {
         console.error('Parâmetro "projeto" não encontrado na URL.');
     }
@@ -116,7 +107,7 @@ function makeApiRequest(apiUrl) {
             tagHtml4.innerHTML = conteudoHTML;
 
 
-            var comentariosArray = data.comentario;
+            var comentariosArray = data.comentarios;
 
             for (var i = 0; i < comentariosArray.length; i++) {
                 criarComentario(imagemAleatoria(),comentariosArray[i].nome,comentariosArray[i].comentario)
