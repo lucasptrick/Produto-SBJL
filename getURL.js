@@ -67,7 +67,7 @@ function redirectToAPIRoute() {
 
 
     if (projetoParam) {
-        const apiUrl = 'http://192.168.2.106:5000/';
+        const apiUrl = 'http://127.0.0.1:5000/';
 
         switch (projetoParam) {
             case '1':
@@ -147,7 +147,7 @@ function adicionarComentario() {
 
         // Enviar os dados para a rota http://192.168.2.106:5000/adicionar_comentario
         $.ajax({
-            url: 'http://192.168.2.106:5000/adicionar_comentario',
+            url: 'http://127.0.0.1:5000/adicionar_comentario',
             type: 'POST', // ou 'GET' dependendo do seu servidor
             contentType: 'application/json',
             data: JSON.stringify(dadosComentario),
