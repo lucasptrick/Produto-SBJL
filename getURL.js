@@ -80,47 +80,45 @@ function redirectToAPIRoute() {
 
 // Função para fazer uma solicitação à API e manipular a resposta JSON
 function makeApiRequest(apiUrl) {
-    $.ajax({
-        url: apiUrl,
-        type: 'GET',
-        dataType: 'json',
-        success: function (data) {
-
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
             var tagHtml0 = document.getElementById("titleText");
             var conteudoHTML = data.title;
             tagHtml0.innerHTML = conteudoHTML;
 
             var tagHtml1 = document.getElementById("introducaoText");
-            var conteudoHTML = data.introduction;
+            conteudoHTML = data.introduction;
             tagHtml1.innerHTML = conteudoHTML;
 
             var tagHtml2 = document.getElementById("DesenvolvimentoText1");
-            var conteudoHTML = data.paragraph1;
+            conteudoHTML = data.paragraph1;
             tagHtml2.innerHTML = conteudoHTML;
 
             var tagHtml3 = document.getElementById("DesenvolvimentoText2");
-            var conteudoHTML = data.paragraph2;
+            conteudoHTML = data.paragraph2;
             tagHtml3.innerHTML = conteudoHTML;
 
             var tagHtml4 = document.getElementById("comclusaoText");
-            var conteudoHTML = data.conclusion;
+            conteudoHTML = data.conclusion;
             tagHtml4.innerHTML = conteudoHTML;
-
 
             var comentariosArray = data.comentarios;
 
             for (var i = 0; i < comentariosArray.length; i++) {
-                criarComentario(imagemAleatoria(),comentariosArray[i].nome,comentariosArray[i].comentario)
+                criarComentario(imagemAleatoria(), comentariosArray[i].nome, comentariosArray[i].comentario);
             }
 
             console.log('Resposta da API:', data);
             // Adicione aqui o código para manipular a resposta JSON conforme necessário
-        },
-        error: function (xhr, status, error) {
-            console.error('Erro na solicitação à API:', status, error);
-        }
-    });
+        })
+        .catch(error => {
+            console.error('Erro na solicitação à API:', error);
+        });
 }
+
+
+
 
 function adicionarComentario() {
     // Obter os valores do formulário
@@ -130,6 +128,7 @@ function adicionarComentario() {
     // Validar se ambos os campos foram preenchidos
     if (nome && comentario) {
         // Criar um objeto com os dados do comentário
+        const url = 'http://127.0.0.1:5000/adicionar_comentario';
         var dadosComentario = {
             nome: nome,
             comentario: comentario,
@@ -137,27 +136,29 @@ function adicionarComentario() {
         };
 
         // Enviar os dados para a rota http://192.168.2.106:5000/adicionar_comentario
-        $.ajax({
-            url: 'http://127.0.0.1:5000/adicionar_comentario',
-            type: 'POST', // ou 'GET' dependendo do seu servidor
-            contentType: 'application/json',
-            data: JSON.stringify(dadosComentario),
-            success: function (response) {
+        fetch(url, {
+            method: 'POST', // ou 'GET' dependendo do seu servidor
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(dadosComentario),
+        })
+            .then(response => response.json())
+            .then(data => {
                 // O servidor pode responder com alguma confirmação, se necessário
-                console.log(response);
+                console.log(data);
+        
                 const name = document.getElementById('nome');
                 const comment = document.getElementById('comentario');
-                criarComentario(imagemAleatoria(),name.value,comment.value)
-
+                criarComentario(imagemAleatoria(), name.value, comment.value);
+        
                 // Limpar os campos do formulário
                 name.value = '';
                 comment.value = '';
-
-            },
-            error: function (error) {
-                console.error("Erro na requisição AJAX", error);
-            }
-        });
+            })
+            .catch(error => {
+                console.error("Erro na requisição Fetch", error);
+            });
     } else {
         alert("Por favor, preencha todos os campos.");
     }
